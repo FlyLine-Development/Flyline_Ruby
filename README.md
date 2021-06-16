@@ -1,16 +1,24 @@
-## Flyline_Ruby
+# Flyline
 
+Client library for [Flyline API](https://flyline.io/docs/). Supports all endpoints, as well as travelling API requests
 
+## Installation
 
-Client library for talking to [Flyline API](https://flyline.io/docs/). Supports all endpoints, as well as travelling API requests
+Add this line to your application's Gemfile:
 
-### How to Install
-
-```sh
-gem "flyline", :git => "git://github.com/FlyLine-Development/flyline_ruby.git"
+```ruby
+gem 'flyline'
 ```
 
-### Usage
+And then execute:
+
+    $ bundle install
+
+Or install it yourself as:
+
+    $ gem install flyline
+
+## Usage
 
 First of all, initialize client:
 
@@ -26,55 +34,20 @@ And then send Request according to your Request:
 client.get_seatTypes()
 ```
 
-### List of All EndPoints
+## Development
 
-Client methods really just map 1 to 1 to API, see all of them beyond. Check [the API docs](https://flyline.io/api-ref) for list of available `data`.
+After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-```ruby
-# getSeatList()
-client.getSeatTypes();
-# getLayoutList()
-client.getSeatLayouts();
-# getFoodList()
-client.getFoods();
-# getBeverageList()
-client.getBeverages();
-# getEntertainmentList()
-client.getEntertainments();
-# getWifiList()
-client.getWifis();
-# getPowerList()
-client.getPowers()
-# getAircraftList()
-client.getAircrafts();
-# getAirCraftByIataCode()
-client.getAircraft(iata_code);
-# getAirlineList()
-client.getAirlines();
-# getAirlineByIataCode()
-client.getAirline(iata_code);
-# getAirportList()
-client.getAirports();
-# getAirportByIataCode()
-client.getAirport(iata_code);
-# getAirportByCity()
-client.getAirportsByCity(iata_code);
-# getCityList()
-client.getCities();
-# getCityByIataCode()
-client.getCity(iata_code);
-# getCabinMapping()
-client.getCabinClassMapping(carrier = optional, cabin_class = optional);
-# getSeatMap({"carrier": "AA","aircraft": "738"})
-client.getSeatMap(data);
-# getSchedulesByFlightNumber({"airline": "AA","date": "2021-06-06","flight_number": "1105"})
-client.getSchedulesByFlightNumber(data);
-# getSchdulesByRoute({"origin": "JFK","destination": "DFW","airline": "AA","date": "2021-06-06"})
-client.getSchedulesByRoute(data);
-# getAirAttributesByFlightNumber({"cabin_class": "economy","departure": "DFW","arrival": "LAX","departure_date": "2021-06-15","flight_no": "2812","carrier": "AA"})
-client.getAirAttributesByFlightNumber(data);
-# getAirAttributeByRoute({"cabin_class": "economy","slices": [{"departure": {"code": "DFW","date": "2021-06-15"},"arrival": {"code": "LAX"}}],"passengers": 1})
-client.getAirAttributesByRoute(data);
-# getAirfares({"cabin_class": "economy","slices": [{"departure": {"code": "DFW","date": "2021-06-15"},"arrival": {"code": "LAX"}}],"passengers": 1})
-client.getAirfares(data);
-```
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/Flyline-Development/flyline_ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/Flyline-Development/flyline_ruby/blob/master/CODE_OF_CONDUCT.md).
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the Flyline project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Flyline-Development/flyline_ruby/blob/master/CODE_OF_CONDUCT.md).
