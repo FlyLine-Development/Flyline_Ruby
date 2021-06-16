@@ -5,8 +5,8 @@ require_relative "lib/flyline/version"
 Gem::Specification.new do |spec|
   spec.name          = "flyline"
   spec.version       = Flyline::VERSION
-  spec.authors       = ["devcaf"]
-  spec.email         = ["60868470+dev-caf@users.noreply.github.com"]
+  spec.authors       = ["flyline"]
+  spec.email         = ["development@flyline.io"]
 
   spec.summary       = "Travel Tech Simplified & Modernized"
   spec.description   = "We provide a modern and simple product suite to access rich content, real-time pricing, flight availability, and much more from all major airlines."
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 
-  spec.metadata["allowed_push_host"] = "https://github.com/Flyline-Development/flyline_ruby.git"
+ 
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/Flyline-Development/flyline_ruby.git"
