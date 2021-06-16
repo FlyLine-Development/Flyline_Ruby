@@ -1,10 +1,16 @@
-### Flyline_Ruby
+## Flyline_Ruby
 
 
 
 Client library for talking to [Flyline API](https://flyline.io/docs/). Supports all endpoints, as well as travelling API requests
 
-#### Usage
+### How to Install
+
+```sh
+gem "flyline", :git => "git://github.com/FlyLine-Development/flyline_ruby.git"
+```
+
+### Usage
 
 First of all, initialize client:
 
@@ -12,13 +18,15 @@ First of all, initialize client:
 client = Flyline::Client.new("FToken")
 ```
 
+
+
 And then send Request according to your Request:
 
 ```ruby
 client.get_seatTypes()
 ```
 
-#### List of All EndPoints
+### List of All EndPoints
 
 Client methods really just map 1 to 1 to API, see all of them beyond. Check [the API docs](https://flyline.io/api-ref) for list of available `data`.
 
