@@ -1,0 +1,8 @@
+---
+:backtrace: false
+:bulk_threshold: 1000
+:sources:
+- https://rubygems.org/
+- https://flylinedev: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@rubygems.pkg.github.com/flyline-development/
+:update_sources: true
+:verbose: true 

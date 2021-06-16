@@ -4,7 +4,7 @@ require_relative "lib/flyline/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "flyline"
-  spec.version       = Flyline::VERSION
+  spec.version       = "1.0.0"
   spec.authors       = ["flyline"]
   spec.email         = ["development@flyline.io"]
 
