@@ -20,27 +20,27 @@ module Flyline
             self.class.get(endPoint).parsed_response
         end
 
-        def get_airfares(data) 
+        def get_airfares(data)
 	        self.sendPostRequest("/api/flights/shop/", data)
         end
 
-        def get_airattributesByFlightNumber(data) 
-	        self.sendPostRequest("/api/search/amenities/", data)
+        def get_airattributesByFlightNumber(data)
+	        self.sendPostRequest("/search/attributes/flight/", data)
         end
 
-        def get_airattributesByRoute(data) 
-	        self.sendPostRequest("/api/amenities/search/route", data)
+        def get_airattributesByRoute(data)
+	        self.sendPostRequest("/search/attributes/route/", data)
         end
 
-        def get_schedulesByFlightNumber(data) 
+        def get_schedulesByFlightNumber(data)
 	        self.sendPostRequest("/api/schedule-flight", data)
         end
 
-        def get_schedulesByRoute(data) 
+        def get_schedulesByRoute(data)
 	        self.sendPostRequest("/api/schedule/", data)
         end
 
-        def get_seatMaps(data) 
+        def get_seatMaps(data)
 	        self.sendPostRequest("/api/seat-maps", data)
         end
 
@@ -48,19 +48,19 @@ module Flyline
 	        self.sendGetRequest("/api/aircraft/")
         end
 
-        def get_aircraft(iata_code) 
+        def get_aircraft(iata_code)
 	        self.sendGetRequest("/api/aircraft/" + iata_code + "/")
         end
 
-        def get_airlines() 
+        def get_airlines()
 	        self.sendGetRequest("/api/airlines/")
         end
 
-        def get_airline(iata_code) 
+        def get_airline(iata_code)
 	        self.sendGetRequest("/api/airlines/" + iata_code + "/")
         end
 
-        def get_airports() 
+        def get_airports()
 	        self.sendGetRequest("/api/airports/")
         end
 
@@ -68,28 +68,28 @@ module Flyline
 	        self.sendGetRequest("/api/airports/" + iata_code + "/")
         end
 
-        def get_airportByCity(iata_code) 
+        def get_airportByCity(iata_code)
             self.sendGetRequest("/api/cities/" + iata_code + "/airports/")
         end
 
-        def get_cities() 
+        def get_cities()
 	        self.sendGetRequest("/api/cities")
         end
 
-        def get_city(iata_code) 
+        def get_city(iata_code)
 	        self.sendGetRequest("/api/cities/" + iata_code + "/")
         end
 
-        def get_cabinClassMapping(carrier, cabin_class) 
+        def get_cabinClassMapping(carrier, cabin_class)
 	        if carrier != "" && cabin_class != ""
 		        self.sendGetRequest("/api/cabin-booking?carrier=" + carrier + "&cabin_class" + cabin_class)
-	        else 
+	        else
 		        self.sendGetRequest("/api/cabin-booking/")
             end
         end
 
 
-        def get_seatTypes() 
+        def get_seatTypes()
 	        self.sendGetRequest("/api/seats/")
         end
 
@@ -97,23 +97,23 @@ module Flyline
             self.sendGetRequest("/api/layouts/")
         end
 
-        def get_aoods() 
+        def get_aoods()
             self.sendGetRequest("/api/foods/")
         end
 
-        def get_aeverages() 
+        def get_aeverages()
             self.sendGetRequest("/api/beverages/")
         end
 
-        def get_antertainments() 
+        def get_antertainments()
             self.sendGetRequest("/api/entertainments/")
         end
 
-        def get_aifis() 
+        def get_aifis()
             self.sendGetRequest("/api/wifis/")
         end
 
-        def get_aowers() 
+        def get_aowers()
             self.sendGetRequest("/api/powers")
         end
     end
